@@ -3,7 +3,9 @@ import { Request, Response } from "express";
 class FilmesController {
 
     public home(req: Request, res: Response) {
-        res.send("Hello Home");
+        const message = "AAASAS OIOIIOIO";
+
+        res.render("home", { message });
     }
 }
 
