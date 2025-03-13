@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { USUARIOS } from "../config/users";
 
 class AuthController {
 
@@ -11,10 +12,13 @@ class AuthController {
         if (!email || !senha) {
             res.render("login", { errorMessage: "credenciais inválidas" });
         }
-
-        if(senha != "123"){
+        const usuario = USUARIOS.find(u => u.email === email && u.senha === senha);
+        if(!usuario){
             res.render("login", { errorMessage: "credenciais inválidas" });
+            return;
         }
+
+        req.session.user = usuario;
         res.status(200).redirect("/home");
     }
 }
