@@ -4,6 +4,7 @@
   "description": "",
   "main": "/src/index.js",
   "scripts": {
+    "seed": "ts-node ./src/seed/seed.ts",
     "build": "tsc && npm run copy:public && npm run copy:views",
     "start": "node dist/index.js",
     "dev": "nodemon --ext ts --exec ts-node src/index.ts",
