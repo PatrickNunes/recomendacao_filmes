@@ -19,12 +19,10 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
             <div>
-                <h1 class="float-md-start mb-0">Filmax</h3>
-                    <nav class="nav nav-masthead justify-content-center float-md-end">
-                        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-                        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-                    </nav>
+                <h1 class="float-md-start mb-0">Filmax</h1>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+                </nav>
             </div>
         </header>
 
@@ -32,54 +30,13 @@
             <h4 style="text-align: start;">Filmes assistidos</h4>
             <div class="swiper filmesAssistidos">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
+                    <% movies.forEach(filme=> { %>
+                        <div class="swiper-slide">
+                            <a href="<%= '/movie/' + filme.id %>">
+                                <img src="<%= filme.poster %>" alt="<%= filme.title %>" />
+                            </a>
+                        </div>
+                        <% }) %>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -90,54 +47,13 @@
 
             <div class="swiper filmesRecomendados">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img
-                            src="https://m.media-amazon.com/images/M/MV5BMjIwMzA3MDAyNl5BMl5BanBnXkFtZTgwNzMyNTE1MjE@._V1_SY1000_SX677_AL_.jpg" />
-                    </div>
+                    <% recMovies.forEach(filme=> { %>
+                        <div class="swiper-slide">
+                            <a href="<%= '/movie/' + filme.id %>">
+                                <img src="<%= filme.poster %>" alt="<%= filme.title %>" />
+                            </a>
+                        </div>
+                        <% }) %>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
